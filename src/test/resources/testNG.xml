@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Va And Partners">
+	<test thread-count="1" verbose="2" name="Default test">
+		<parameter name="instaLogin" value="alik22"></parameter>
+		<parameter name="instaPswd" value="12345678"></parameter>
+		<parameter name="fbLogin" value="alikfb"></parameter>
+		<parameter name="fbPasswd" value="12349877625376235678"></parameter>
+		<classes>
+			<class name="web365.home.page.test.HomeTabPageTest">
+				<methods>
+					<exclude name="destinationTabTest" />
+					<exclude name="travelToArmeniaTabTest" />
+					<include name="armeniaTabGenInfTest" />
+					<exclude name="armeniaTabHistoryTest" />
+					<exclude name="armeniaTabHolidaysTest" />
+					<exclude name="armeniaTabExcursionsTest" />
+					<exclude name="armeniaTabHotelsTest" />
+					<exclude name="armeniaTabMuseumTest" />
+					<exclude name="armeniaTabGalleryTest" />
+					<exclude name="armeniaTabAboutTest" />
+					<exclude name="armeniaTabContactsTest" />
+				</methods>
+			</class>
+
+
+			<class name="web365.outgoing.test.OutgoingTest">
+				<methods>
+					<exclude name="outgoingTourUae" />
+					<exclude name="outgoingTourJordan" />
+					<exclude name="outgoingTourThailand" />
+					<exclude name="outgoingTourSrilanka" />
+					<exclude name="outgoingTourIsrael" />
+					<exclude name="outgoingTourGeorgia" />
+					<exclude name="outgoingTourBulgaria" />
+					<exclude name="outgoingTourItaly" />
+					<exclude name="outgoingTourGrecce" />
+					<exclude name="outgoingTourCyprus" />
+					<exclude name="outgoingTourFrance" />
+					<exclude name="outgoingTourNorway" />
+					<exclude name="outgoingTourCzech" />
+					<exclude name="outgoingTourSpain" />
+					<exclude name="outgoingTourEgypt" />
+					<exclude name="outgoingTourSingapore" />
+					<exclude name="outgoingTourMaldives" />
+					<exclude name="outgoingTourBali" />
+					<exclude name="outgoingTourRussia" />
+					<exclude name="outgoingTourUkrain" />
+				</methods>
+			</class>
+
+			<class name="web365.travel.to.armenia.test.IncomingTest">
+				<methods>
+					<exclude name="armeniaAndGeorgia" />
+					<exclude name="armeniaFairyTale" />
+					<exclude name="culturalTour" />
+					<exclude name="armeniaShortTour" />
+					<exclude name="discoverArmeniaTour" />
+					<exclude name="armeniaGharanaghTour" />
+					<exclude name="recognizeArmenia" />
+					<exclude name="culturalTour5Days" />
+					<exclude name="aniqueArmenia" />
+					<exclude name="antiquarianTour" />
+					<exclude name="famTrip" />
+					<exclude name="colorsOfArmenia" />
+					<exclude name="honeymoon" />
+					<exclude name="petroglyphTour" />
+					<exclude name="vaccineTour" />
+				</methods>
+			</class>
+
+			<class name="web365.history.and.culture.HistoryAndCultureTest">
+				<methods>
+					<exclude name="antiquity" />
+					<exclude name="middleAges" />
+					<exclude name="earlyModernEra" />
+					<exclude name="worldWar1AndGenocide" />
+					<exclude name="democraticRepublicOfArmenia" />
+					<exclude name="sovietArmenia" />
+					<exclude name="cultureOfArmenia" />
+				</methods>
+			</class>
+
+			<class name="web365.holidays.and.traditions.HolidaysAndTraditionsTest">
+				<methods>
+					<exclude name="newYear" />
+					<exclude name="nationalArmyDay" />
+					<exclude name="womensDay" />
+					<exclude name="maternityDay" />
+					<exclude name="victoryAndPeaceDay" />
+					<exclude name="republicDay" />
+					<exclude name="constitutionDay" />
+					<exclude name="indipendenceDay" />
+					<exclude name="traditions" />
+				</methods>
+			</class>
+
+			<class name="web365.tours.and.excursions.ToursAndExcursionsTest">
+				<methods>
+					<exclude name="erevanCity" />
+					<exclude name="erebuniMuseum" />
+					<exclude name="tsitsernakaberd" />
+					<exclude name="matenadaran" />
+					<exclude name="echmiadzin" />
+					<exclude name="stHripsime" />
+					<exclude name="stGayane" />
+					<exclude name="motherCathedral" />
+					<exclude name="zvartnots" />
+					<exclude name="ashtarak" />
+					<exclude name="aragats" />
+					<exclude name="karmravor" />
+					<exclude name="amberd" />
+					<exclude name="oshakan" />
+					<exclude name="karmravor2" />
+					<exclude name="saghmosavank" />
+					<exclude name="hovhanavanq" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
