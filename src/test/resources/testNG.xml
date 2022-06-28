@@ -9,116 +9,116 @@
 		<classes>
 			<class name="web365.home.page.test.HomeTabPageTest">
 				<methods>
-					<exclude name="destinationTabTest" />
-					<exclude name="travelToArmeniaTabTest" />
-					<exclude name="armeniaTabGenInfTest" />
-					<exclude name="armeniaTabHistoryTest" />
-					<exclude name="armeniaTabHolidaysTest" />
-					<exclude name="armeniaTabExcursionsTest" />
-					<exclude name="armeniaTabHotelsTest" />
-					<exclude name="armeniaTabMuseumTest" />
-					<exclude name="armeniaTabGalleryTest" />
-					<exclude name="armeniaTabAboutTest" />
-					<exclude name="armeniaTabContactsTest" />
+					<include name="destinationTabTest" />
+					<include name="travelToArmeniaTabTest" />
+					<include name="armeniaTabGenInfTest" />
+					<include name="armeniaTabHistoryTest" />
+					<include name="armeniaTabHolidaysTest" />
+					<include name="armeniaTabExcursionsTest" />
+					<include name="armeniaTabHotelsTest" />
+					<include name="armeniaTabMuseumTest" />
+					<include name="armeniaTabGalleryTest" />
+					<include name="armeniaTabAboutTest" />
+					<include name="armeniaTabContactsTest" />
 				</methods>
 			</class>
 
 
 			<class name="web365.outgoing.test.OutgoingTest">
 				<methods>
-					<exclude name="outgoingTourUae" />
-					<exclude name="outgoingTourJordan" />
-					<exclude name="outgoingTourThailand" />
-					<exclude name="outgoingTourSrilanka" />
-					<exclude name="outgoingTourIsrael" />
-					<exclude name="outgoingTourGeorgia" />
-					<exclude name="outgoingTourBulgaria" />
-					<exclude name="outgoingTourItaly" />
-					<exclude name="outgoingTourGrecce" />
-					<exclude name="outgoingTourCyprus" />
-					<exclude name="outgoingTourFrance" />
-					<exclude name="outgoingTourNorway" />
-					<exclude name="outgoingTourCzech" />
-					<exclude name="outgoingTourSpain" />
-					<exclude name="outgoingTourEgypt" />
-					<exclude name="outgoingTourSingapore" />
-					<exclude name="outgoingTourMaldives" />
-					<exclude name="outgoingTourBali" />
-					<exclude name="outgoingTourRussia" />
-					<exclude name="outgoingTourUkrain" />
+					<include name="outgoingTourUae" />
+					<include name="outgoingTourJordan" />
+					<include name="outgoingTourThailand" />
+					<include name="outgoingTourSrilanka" />
+					<include name="outgoingTourIsrael" />
+					<include name="outgoingTourGeorgia" />
+					<include name="outgoingTourBulgaria" />
+					<include name="outgoingTourItaly" />
+					<include name="outgoingTourGrecce" />
+					<include name="outgoingTourCyprus" />
+					<include name="outgoingTourFrance" />
+					<include name="outgoingTourNorway" />
+					<include name="outgoingTourCzech" />
+					<include name="outgoingTourSpain" />
+					<include name="outgoingTourEgypt" />
+					<include name="outgoingTourSingapore" />
+					<include name="outgoingTourMaldives" />
+					<include name="outgoingTourBali" />
+					<include name="outgoingTourRussia" />
+					<include name="outgoingTourUkrain" />
 				</methods>
 			</class>
 
 			<class name="web365.travel.to.armenia.test.IncomingTest">
 				<methods>
-					<exclude name="armeniaAndGeorgia" />
-					<exclude name="armeniaFairyTale" />
-					<exclude name="culturalTour8Days" />
-					<exclude name="armeniaShortTour" />
-					<exclude name="discoverArmeniaTour" />
-					<exclude name="armeniaGharanaghTour" />
-					<exclude name="recognizeArmenia" />
-					<exclude name="culturalTour5Days" />
-					<exclude name="uniqueArmenia" />
-					<exclude name="aniqueArmenia" />
-					<exclude name="antiquarianTour" />
-					<exclude name="famTrip" />
-					<exclude name="colorsOfArmenia" />
-					<exclude name="honeymoon" />
-					<exclude name="petroglyphTour" />
-					<exclude name="vaccineTour" />
+					<include name="armeniaAndGeorgia" />
+					<include name="armeniaFairyTale" />
+					<include name="culturalTour8Days" />
+					<include name="armeniaShortTour" />
+					<include name="discoverArmeniaTour" />
+					<include name="armeniaGharanaghTour" />
+					<include name="recognizeArmenia" />
+					<include name="culturalTour5Days" />
+					<include name="uniqueArmenia" />
+					<include name="aniqueArmenia" />
+					<include name="antiquarianTour" />
+					<include name="famTrip" />
+					<include name="colorsOfArmenia" />
+					<include name="honeymoon" />
+					<include name="petroglyphTour" />
+					<include name="vaccineTour" />
 				</methods>
 			</class>
 
 			<class name="web365.history.and.culture.HistoryAndCultureTest">
 				<methods>
-					<exclude name="antiquity" />
-					<exclude name="middleAges" />
-					<exclude name="earlyModernEra" />
-					<exclude name="worldWar1AndGenocide" />
-					<exclude name="democraticRepublicOfArmenia" />
-					<exclude name="sovietArmenia" />
-					<exclude name="cultureOfArmenia" />
+					<include name="antiquity" />
+					<include name="middleAges" />
+					<include name="earlyModernEra" />
+					<include name="worldWar1AndGenocide" />
+					<include name="democraticRepublicOfArmenia" />
+					<include name="sovietArmenia" />
+					<include name="cultureOfArmenia" />
 				</methods>
 			</class>
 
 			<class name="web365.holidays.and.traditions.HolidaysAndTraditionsTest">
 				<methods>
-					<exclude name="newYear" />
-					<exclude name="nationalArmyDay" />
-					<exclude name="womensDay" />
-					<exclude name="maternityDay" />
-					<exclude name="victoryAndPeaceDay" />
-					<exclude name="republicDay" />
-					<exclude name="constitutionDay" />
-					<exclude name="indipendenceDay" />
-					<exclude name="traditions" />
+					<include name="newYear" />
+					<include name="nationalArmyDay" />
+					<include name="womensDay" />
+					<include name="maternityDay" />
+					<include name="victoryAndPeaceDay" />
+					<include name="republicDay" />
+					<include name="constitutionDay" />
+					<include name="indipendenceDay" />
+					<include name="traditions" />
 				</methods>
 			</class>
 
 			<class name="web365.tours.and.excursions.ToursAndExcursionsTest">
 				<methods>
-					<exclude name="erevanCity" />
-					<exclude name="erebuniMuseum" />
-					<exclude name="tsitsernakaberd" />
-					<exclude name="matenadaran" />
+					<include name="erevanCity" />
+					<include name="erebuniMuseum" />
+					<include name="tsitsernakaberd" />
+					<include name="matenadaran" />
 
-					<exclude name="echmiadzin" />
-					<exclude name="stHripsime" />
-					<exclude name="stGayane" />
-					<exclude name="motherCathedral" />
-					<exclude name="zvartnots" />
+					<include name="echmiadzin" />
+					<include name="stHripsime" />
+					<include name="stGayane" />
+					<include name="motherCathedral" />
+					<include name="zvartnots" />
 
-					<exclude name="ashtarak" />
-					<exclude name="aragats" />
-					<exclude name="karmravor" />
-					<exclude name="amberd" />
+					<include name="ashtarak" />
+					<include name="aragats" />
+					<include name="karmravor" />
+					<include name="amberd" />
 
-					<exclude name="oshakanHovhanavanq" />
-					<exclude name="oshakan" />
-					<exclude name="karmravor2" />
-					<exclude name="saghmosavank" />
-					<exclude name="hovhanavanq" />
+					<include name="oshakanHovhanavanq" />
+					<include name="oshakan" />
+					<include name="karmravor2" />
+					<include name="saghmosavank" />
+					<include name="hovhanavanq" />
 
                     <include name="garniGeghard" />
 				</methods>
