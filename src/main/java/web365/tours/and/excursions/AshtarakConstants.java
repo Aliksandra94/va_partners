@@ -13,7 +13,7 @@ public class AshtarakConstants {
 	public static final String KARMRAVOR_STORY_XPATH = "//div[@class='media-body']//h5[text() = 'Karmravor']";
 	public static final String KARMRAVOR_STORY_CLOSE_XPATH = "//div[@class='hide_all_modal show_modal3_2']//span[@class='lnr lnr-cross']";
 	
-	public static final String AMBERD_XPAHT = "//li[@data-modal='show_modal3_3']";
+	public static final String AMBERD_XPAHT = "//li[contains(text(), 'Amberd')]";
 	public static final String AMBERD_STORY_XPATH = "//div[@class='media-body']//h5[text() = 'Amberd']";
 	public static final String AMBERD_STORY_CLOSE_XPATH = "//div[@class='hide_all_modal show_modal3_3']//span[@class='lnr lnr-cross']";
 }

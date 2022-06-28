@@ -23,9 +23,10 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		ErevanCityTour erevanPage = new ErevanCityTour(driver);
+		Thread.sleep(2000);
 		Assert.assertTrue(erevanPage.erevanCity.isDisplayed());
 		Thread.sleep(2000);
 		
@@ -45,25 +46,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		ErevanCityTour erevanCity = new ErevanCityTour(driver);
 		Assert.assertTrue(erevanCity.erevanCity.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Erevan city button");
-		erevanCity.goToErevanCity();
-		Assert.assertTrue(erevanCity.erebuni.isDisplayed());
+		erevanCity = erevanCity.goToErevanCity();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(erevanCity.erebuni.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Erebuni Museum button");
-		erevanCity.goToErebuni();
-		Thread.sleep(2000);
-		Assert.assertTrue(erevanCity.erebuniStory.isDisplayed());
+		erevanCity = erevanCity.goToErebuni();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(erevanCity.erebuniStory.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Erebuni cross button");
-		erevanCity.goToErebuniClose();
+		erevanCity = erevanCity.goToErebuniClose();
 		Thread.sleep(2000);
 		
 		
@@ -84,25 +86,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		ErevanCityTour erevanCity = new ErevanCityTour(driver);
 		Assert.assertTrue(erevanCity.erevanCity.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Erevan city button");
-		erevanCity.goToErevanCity();
-		Assert.assertTrue(erevanCity.tsitsernakaberd.isDisplayed());
+		erevanCity = erevanCity.goToErevanCity();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(erevanCity.tsitsernakaberd.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Tsitsernakaberd button");
-		erevanCity.goToTsitsernakaberd();
-		Thread.sleep(2000);
-		Assert.assertTrue(erevanCity.tsitsernakStory.isDisplayed());
+		erevanCity = erevanCity.goToTsitsernakaberd();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(erevanCity.tsitsernakStory.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Tsitsernakaberd cross button");
-		erevanCity.goToTsitsernakClose();
+		erevanCity = erevanCity.goToTsitsernakClose();
 		Thread.sleep(2000);
 		
 	}
@@ -122,25 +125,25 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		ErevanCityTour erevanCity = new ErevanCityTour(driver);
 		Assert.assertTrue(erevanCity.erevanCity.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Erevan city button");
-		erevanCity.goToErevanCity();
-		Assert.assertTrue(erevanCity.matenadaran.isDisplayed());
+		erevanCity= erevanCity.goToErevanCity();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(erevanCity.matenadaran.isDisplayed());
 		Thread.sleep(4000);
 		
 		System.out.println("5. Click on Matenadaran button");
-		erevanCity.goToMatenadaran();
-		Thread.sleep(4000);
-		Assert.assertTrue(erevanCity.matenadaranStory.isDisplayed());
+		erevanCity = erevanCity.goToMatenadaran();
+		//Assert.assertTrue(erevanCity.matenadaranStory.isDisplayed());
 		Thread.sleep(4000);
 		
 		System.out.println("6. Click on Matenadaran cross button");
-		erevanCity.goToMatenadaranClose();
+		erevanCity = erevanCity.goToMatenadaranClose();
 		Thread.sleep(2000);
 	}
 	
@@ -159,7 +162,7 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Echmiadzin echmiadzin = new Echmiadzin(driver);
 		Assert.assertTrue(echmiadzin.echmiadzin.isDisplayed());
@@ -183,25 +186,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Echmiadzin echmiadzin = new Echmiadzin(driver);
 		Assert.assertTrue(echmiadzin.echmiadzin.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Echmiadzin button");
-		echmiadzin.goToEchmiadzin();
-		Assert.assertTrue(echmiadzin.hripsime.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin= echmiadzin.goToEchmiadzin();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.hripsime.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on St. Hripsime button");
-		echmiadzin.goToHripsime();
-		Thread.sleep(4000);
-		Assert.assertTrue(echmiadzin.hripsimeStory.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin = echmiadzin.goToHripsime();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.hripsimeStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on St.Hripsime cross button");
-		echmiadzin.goToHripsimeClose();
+		echmiadzin = echmiadzin.goToHripsimeClose();
 		Thread.sleep(2000);
 		
 }
@@ -221,25 +225,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Echmiadzin echmiadzin = new Echmiadzin(driver);
 		Assert.assertTrue(echmiadzin.echmiadzin.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Echmiadzin button");
-		echmiadzin.goToEchmiadzin();
-		Assert.assertTrue(echmiadzin.gayane.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin = echmiadzin.goToEchmiadzin();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.gayane.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on St. Gayane button");
-		echmiadzin.goToGayane();
-		Thread.sleep(4000);
-		Assert.assertTrue(echmiadzin.gayaneStory.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin = echmiadzin.goToGayane();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.gayaneStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on St. Gayane cross button");
-		echmiadzin.goToGayaneClose();
+		echmiadzin = echmiadzin.goToGayaneClose();
 		Thread.sleep(2000);
 		
 }
@@ -260,25 +265,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Echmiadzin echmiadzin = new Echmiadzin(driver);
 		Assert.assertTrue(echmiadzin.echmiadzin.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Echmiadzin button");
-		echmiadzin.goToEchmiadzin();
-		Assert.assertTrue(echmiadzin.mother.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin = echmiadzin.goToEchmiadzin();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.mother.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Mother Cathedral button");
-		echmiadzin.goToMother();
-		Thread.sleep(4000);
-		Assert.assertTrue(echmiadzin.motherStory.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin = echmiadzin.goToMother();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.motherStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Mother Cathedral cross button");
-		echmiadzin.goToMotherClose();
+		echmiadzin = echmiadzin.goToMotherClose();
 		Thread.sleep(2000);
 	}
 	
@@ -297,25 +303,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Echmiadzin echmiadzin = new Echmiadzin(driver);
 		Assert.assertTrue(echmiadzin.echmiadzin.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Echmiadzin button");
-		echmiadzin.goToEchmiadzin();
-		Assert.assertTrue(echmiadzin.zvartnots.isDisplayed());
-		Thread.sleep(4000);
+		echmiadzin = echmiadzin.goToEchmiadzin();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.zvartnots.isDisplayed());
+		Thread.sleep(2000);
 		
-		System.out.println("5. Click on Mother Cathedral button");
-		echmiadzin.goToZvartnots();
-		Thread.sleep(4000);
-		Assert.assertTrue(echmiadzin.zvartnotsStory.isDisplayed());
-		Thread.sleep(4000);
+		System.out.println("5. Click on Zvartots button");
+		echmiadzin = echmiadzin.goToZvartnots();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(echmiadzin.zvartnotsStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Mother Cathedral cross button");
-		echmiadzin.goToMotherClose();
+		echmiadzin = echmiadzin.goToZvartnotsClose();
 		Thread.sleep(2000);
 	}
 	
@@ -332,7 +339,7 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Ashtarak ashtarak = new Ashtarak(driver);
 		Assert.assertTrue(ashtarak.ashtarak.isDisplayed());
@@ -353,25 +360,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
-		Ashtarak ashatarak = new Ashtarak(driver);
-		Assert.assertTrue(ashatarak.ashtarak.isDisplayed());
+		Ashtarak ashtarak = new Ashtarak(driver);
+		Assert.assertTrue(ashtarak.ashtarak.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Ashtarak button");
-		ashatarak.goToAshtarak();
-		Assert.assertTrue(ashatarak.aragats.isDisplayed());
-		Thread.sleep(4000);
+		ashtarak = ashtarak.goToAshtarak();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(ashtarak.aragats.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Aragats button");
-		ashatarak.goToAragats();
-		Thread.sleep(4000);
-		Assert.assertTrue(ashatarak.aragatsStory.isDisplayed());
-		Thread.sleep(4000);
+		ashtarak = ashtarak.goToAragats();
+		//Thread.sleep(4000);
+		//Assert.assertTrue(ashtarak.aragatsStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Aragats cross button");
-		ashatarak.goToAragatsClose();
+		ashtarak = ashtarak.goToAragatsClose();
 		Thread.sleep(2000);
 		
 }
@@ -391,25 +399,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Ashtarak ashtarak = new Ashtarak(driver);
 		Assert.assertTrue(ashtarak.ashtarak.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Ashtarak button");
-		ashtarak.goToAshtarak();
-		Assert.assertTrue(ashtarak.karmravor.isDisplayed());
-		Thread.sleep(4000);
+		ashtarak = ashtarak.goToAshtarak();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(ashtarak.karmravor.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Karmravor button");
-		ashtarak.goToKarmravor();
-		Thread.sleep(4000);
-		Assert.assertTrue(ashtarak.karmravorStory.isDisplayed());
-		Thread.sleep(4000);
+		ashtarak = ashtarak.goToKarmravor();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(ashtarak.karmravorStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Aragats cross button");
-		ashtarak.goToKarmravorClose();
+		ashtarak = ashtarak.goToKarmravorClose();
 		Thread.sleep(2000);
 		
 }
@@ -424,35 +433,54 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		
 		System.out.println("2. Click on Armenia button");
-		ArmeniaMenuPage armMenu = home.goToArmenia();
-		home.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
-		
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		home = armMenu.goToToursExcursions();
 		
-		Ashtarak ashtarak = new Ashtarak(driver);
-		Assert.assertTrue(ashtarak.ashtarak.isDisplayed());
+		Ashtarak ashtarak1 = new Ashtarak(driver);
+		Assert.assertTrue(ashtarak1.ashtarak.isDisplayed());
+		Thread.sleep(2000);
+			
+		System.out.println("4. Click on Amberd button");
+		ashtarak1 = ashtarak1.goToAshtarak();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(ashtarak1.amberd.isDisplayed());
 		Thread.sleep(2000);
 		
-		System.out.println("4. Click on Amberd button");
-		ashtarak.goToAshtarak();
-		Assert.assertTrue(ashtarak.amberd.isDisplayed());
-		Thread.sleep(4000);
-		
 		System.out.println("5. Click on Amberd button");
-		ashtarak.goToAmberd();
-		Thread.sleep(4000);
-		Assert.assertTrue(ashtarak.amberdStory.isDisplayed());
-		Thread.sleep(4000);
+		ashtarak1 = ashtarak1.goToAmberd();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(ashtarak1.amberdStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Aragats cross button");
-		ashtarak.goToAmberdClose();
+		ashtarak1 = ashtarak1.goToAmberdClose();
 		Thread.sleep(2000);
 		
 }
 	
+	
+	@Test 
+	public void oshakanHovhanavanq() throws InterruptedException {
+		
+		System.out.println("1. Open Home Page");
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
+		Thread.sleep(2000);
+		
+		System.out.println("2. Click on Armenia button");
+		ArmeniaMenuPage armMenu = home.goToArmenia();
+		Thread.sleep(2000);
+		
+		System.out.println("3. Click on Tours and Excursions button");
+		armMenu.goToToursExcursions();
+		
+		Oshakan oshakan = new Oshakan(driver);
+		Assert.assertTrue(oshakan.oshakanHovhanavank.isDisplayed());
+		Thread.sleep(2000);
+	}
 	
 	
 	@Test
@@ -469,25 +497,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Oshakan oshakan = new Oshakan(driver);
 		Assert.assertTrue(oshakan.oshakanHovhanavank.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Oshakan Hovhanavank button");
-		oshakan.goToOshakanHovhanavank();
-		Assert.assertTrue(oshakan.oshakan.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToOshakanHovhanavank();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.oshakan.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Oshakan button");
-		oshakan.goToOshakan();
-		Thread.sleep(4000);
-		Assert.assertTrue(oshakan.oshakanStory.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToOshakan();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.oshakanStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Oshakan cross button");
-		oshakan.goToOshakanClose();
+		oshakan = oshakan.goToOshakanClose();
 		Thread.sleep(2000);
 		
 }
@@ -507,25 +536,26 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Oshakan oshakan = new Oshakan(driver);
 		Assert.assertTrue(oshakan.oshakanHovhanavank.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Oshakan Hovhanavank button");
-		oshakan.goToOshakanHovhanavank();
-		Assert.assertTrue(oshakan.karmravor.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToOshakanHovhanavank();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.karmravor2.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Karmravor button");
-		oshakan.goToKarmravor();
-		Thread.sleep(4000);
-		Assert.assertTrue(oshakan.karmravorStory.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToKarmravor();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.karmravor2Story.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Karmravor cross button");
-		oshakan.goToKarmravor2Close();
+		oshakan = oshakan.goToKarmravor2Close();
 		Thread.sleep(2000);
 		
 }
@@ -546,25 +576,25 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
+		armMenu.goToToursExcursions();
 		
 		Oshakan oshakan = new Oshakan(driver);
 		Assert.assertTrue(oshakan.oshakanHovhanavank.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Oshakan Hovhanavank button");
-		oshakan.goToOshakanHovhanavank();
-		Assert.assertTrue(oshakan.saghmosavank.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToOshakanHovhanavank();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.saghmosavank.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Saghmosavank button");
-		oshakan.goToSaghmosavank();
-		Thread.sleep(4000);
-		Assert.assertTrue(oshakan.saghmosavankStory.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToSaghmosavank();
+		//Assert.assertTrue(oshakan.saghmosavankStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Karmravor cross button");
-		oshakan.goToSaghmosavankClose();
+		oshakan = oshakan.goToSaghmosavankClose();
 		Thread.sleep(2000);
 		
 }
@@ -581,29 +611,53 @@ public class ToursAndExcursionsTest extends BasePageTest {
 		
 		System.out.println("2. Click on Armenia button");
 		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		armMenu.goTotoursExcursions();
-		
-		Oshakan oshakan = new Oshakan(driver);
-		Assert.assertTrue(oshakan.oshakanHovhanavank.isDisplayed());
+		armMenu.goToToursExcursions();
+		Assert.assertTrue(armMenu.toursExcursions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Oshakan Hovhanavank button");
+		Oshakan oshakan = new Oshakan(driver);
 		oshakan.goToOshakanHovhanavank();
-		Assert.assertTrue(oshakan.hovhanavanq.isDisplayed());
-		Thread.sleep(4000);
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.hovhanavanq.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Hovhanavanq button");
-		oshakan.goToHovhanavanq();
-		Thread.sleep(4000);
-		Assert.assertTrue(oshakan.hovhanavanqStory.isDisplayed());
-		Thread.sleep(4000);
+		oshakan = oshakan.goToHovhanavanq();
+		//Thread.sleep(2000);
+		//Assert.assertTrue(oshakan.hovhanavanqStory.isDisplayed());
+		Thread.sleep(2000);
 		
 		System.out.println("6. Click on Karmravor cross button");
-		oshakan.goToHovhanavanqClose();
+		oshakan = oshakan.goToHovhanavanqClose();
 		Thread.sleep(2000);
 		
 }
+	
+	@Test
+	public void garniGeghard () throws InterruptedException {
+		
+		System.out.println("1. Open Home Page");
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
+		Thread.sleep(2000);
+		
+		System.out.println("2. Click on Armenia button");
+		ArmeniaMenuPage armMenu = home.goToArmenia();
+		Thread.sleep(2000);
+		
+		System.out.println("3. Click on Tours and Excursions button");
+		armMenu.goToToursExcursions();
+		
+		GarniGeghard garni = new GarniGeghard(driver);
+		Assert.assertTrue(garni.garniGeghard.isDisplayed());
+		Thread.sleep(2000);
+		
+
+		
+	}
 }

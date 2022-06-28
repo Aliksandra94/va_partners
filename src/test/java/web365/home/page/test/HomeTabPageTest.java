@@ -67,9 +67,11 @@ public class HomeTabPageTest extends BasePageTest {
 		System.out.println("2. Move to Armenia button");
 		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Assert.assertTrue(armMenu.armTab.isDisplayed());
-		armMenu.goToGenInf();
+		Thread.sleep(2000);
 		
+		System.out.println("3. Click on General Information button");
         GeneralInformation genInf = new GeneralInformation(driver);
+        armMenu.goToGenInf();
 	    Assert.assertTrue(genInf.aboutArmHead.isDisplayed());
 	    Thread.sleep(2000);
 	
@@ -79,16 +81,19 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabHistoryTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		HistoryAndCulture menuTab = new HistoryAndCulture(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Move to Armenia button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.armTab.isDisplayed());
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
-		menuTab.goToHistoryCulture();
-		Assert.assertTrue(menuTab.historyCultureHead.isDisplayed());
+		
+		System.out.println("3. Click on History and Culture button");
+		HistoryAndCulture history = new HistoryAndCulture(driver);
+		history.goToHistoryAndCulture();
+		Assert.assertTrue(history.historyCultureHead.isDisplayed());
 	}
 	
 	
@@ -97,16 +102,19 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabHolidaysTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		HolidaysAndTraditions menuTab = new HolidaysAndTraditions(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Move to Armenia button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.armTab.isDisplayed());
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
-		menuTab.goToHolidaysTraditions();
-		Assert.assertTrue(menuTab.holidaysTraditionsHead.isDisplayed());
+		
+		System.out.println("3. Click on Holidays and Traditions button");
+		HolidaysAndTraditions holidays = new HolidaysAndTraditions(driver);
+		holidays.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 	}
 	
 	
@@ -114,18 +122,19 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabExcursionsTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ToursAndExcursions menuTab = new ToursAndExcursions(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Move to Armenia button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.armTab.isDisplayed());
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Tours and Excursions button");
-		menuTab.goToToursExcursions();
-		Assert.assertTrue(menuTab.toursExcursionsHead.isDisplayed());
+		ToursAndExcursions toursExcursions = new ToursAndExcursions(driver);
+		toursExcursions.goToToursExcursions();
+		Assert.assertTrue(toursExcursions.toursExcursionsHead.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -133,16 +142,19 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabHotelsTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		HotelsInYerevan menuTab = new HotelsInYerevan(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
-		System.out.println("2. Move to Armenia button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.armTab.isDisplayed());
+		System.out.println("2. Click on Armenia button");
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
-		menuTab.goToHotelInYerevan();
-		Assert.assertTrue(menuTab.hotelInYerevanHead.isDisplayed());
+		
+		System.out.println("3. click on Hotels in Yerevan button");
+		HotelsInYerevan hotels = new HotelsInYerevan(driver);
+		hotels.goToHotelInYerevan();
+		Assert.assertTrue(hotels.hotelInYerevanHead.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -150,17 +162,19 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabMuseumTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		Museums menuTab = new Museums(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Move to Armenia button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.armTab.isDisplayed());
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
-		menuTab.goToMuseum();
-		Thread.sleep(3000);
-		Assert.assertTrue(menuTab.museumHead.isDisplayed());
+		
+		System.out.println("3. Click on Museum button");
+		Museums museum = new Museums(driver);
+		museum.goToMuseum();
+		Assert.assertTrue(museum.museumHead.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -168,16 +182,14 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabGalleryTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		Gallery menuTab = new Gallery(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
-		System.out.println("2. Move to Gallery button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.gallery.isDisplayed());
-		Thread.sleep(2000);
-		menuTab.goToGallery();
-		Assert.assertTrue(menuTab.Gallery1.isDisplayed());
+		System.out.println("2. Click on Gallery button");
+		Gallery gallery = new Gallery(driver);
+		gallery.goToGallery();
+		Assert.assertTrue(gallery.Gallery1.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -186,18 +198,15 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabAboutTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		AboutUs menuTab = new AboutUs(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
-		System.out.println("2. Move to About Us button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.aboutUs.isDisplayed());
+		System.out.println("2. Click on About Us button");
+		AboutUs aboutUs = home.goToAboutUs();
+		Assert.assertTrue(aboutUs.aboutUs.isDisplayed());
 		Thread.sleep(2000);
 		
-		menuTab.goToAboutUs();
-		Assert.assertTrue(menuTab.aboutStory.isDisplayed());
-		Thread.sleep(2000);
 	}
 	
 	
@@ -205,17 +214,15 @@ public class HomeTabPageTest extends BasePageTest {
 	public void armeniaTabContactsTest () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		Contacts menuTab = new Contacts(driver);
-		Assert.assertTrue(menuTab.menuTabs.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.menuTabs.isDisplayed());
 		Thread.sleep(2000);
 		
-		System.out.println("2. Move to Armenia button");
-		menuTab.goToArmenia();
-		Assert.assertTrue(menuTab.cont.isDisplayed());
+		System.out.println("2. Move to Contacts button");
+		Contacts armMenu = home.goToCont();
+		Assert.assertTrue(armMenu.cont.isDisplayed());
 		Thread.sleep(2000);
-		menuTab.goToCont();
-		Assert.assertTrue(menuTab.contInf.isDisplayed());
-		Thread.sleep(2000);
+		
 	
 }
 }

@@ -2,7 +2,7 @@ package web365.home.page;
 
 import org.openqa.selenium.WebDriver;
 
-import web365.general.information.GeneralInformation;
+
 import web365.history.and.culture.HistoryAndCulture;
 import web365.holidays.and.traditions.HolidaysAndTraditions;
 import web365.tours.and.excursions.ToursAndExcursions;
@@ -15,9 +15,9 @@ public class ArmeniaMenuPage extends HomeTabPage {
 
 	
 
-	public GeneralInformation goToGenInf() {
+	public ArmeniaMenuPage goToGenInf() {
 		moveToElement (genInf);
-		return new GeneralInformation (this.driver);
+		return new ArmeniaMenuPage (this.driver);
 		
 	}
 	
@@ -36,11 +36,14 @@ public class ArmeniaMenuPage extends HomeTabPage {
 		
 	}
 
-	public ToursAndExcursions goTotoursExcursions() {
+	public ToursAndExcursions goToToursExcursions() {
 		moveToElement (toursExcursions);
 		return new ToursAndExcursions (this.driver);
 		
 	}
+
+
+
 
 	
 }

@@ -16,5 +16,15 @@ public class HolidaysAndTraditions extends HomeTabPage {
 
 
 	@FindBy(xpath = HOLIDAYS_AND_TRADITIONS_HEADER_XPATH)
-	public WebElement holidaysTraditionsHead;
+	public WebElement holidaysTraditions;
+
+
+	public HolidaysAndTraditions goToHolidaysTraditions() {
+         moveToElement(holidaysTraditions);
+         return new HolidaysAndTraditions(this.driver);
+	}
+
+
+			
+	
 }

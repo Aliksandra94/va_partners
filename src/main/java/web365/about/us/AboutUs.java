@@ -21,4 +21,9 @@ public class AboutUs extends HomeTabPage {
 		moveToElement(aboutStory);
 		return new AboutUs(this.driver);
 	}
+	
+	public AboutUs goToAboutUs() {
+		moveToElement (aboutUs);
+		return new AboutUs(this.driver);
+	}
 }

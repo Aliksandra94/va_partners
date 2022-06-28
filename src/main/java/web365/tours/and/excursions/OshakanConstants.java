@@ -18,5 +18,5 @@ public class OshakanConstants {
 	
 	public static final String HOVHANAVANQ_XPATH = "//li[@data-modal='show_modal4_4']";
 	public static final String HOVHANAVANQ_STORY_XPATH = "//div[@class='media-body']//h5[text() ='Hovhanavanq']";
-	public static final String HOVHANAVANQ_SOTRY_CLOSE_XPATH = "//div[@class='hide_all_modal show_moda4_4']//span[@class='lnr lnr-cross']";
+	public static final String HOVHANAVANQ_SOTRY_CLOSE_XPATH = "//div[@class='hide_all_modal show_modal4_4']//span[@class='lnr lnr-cross']";
 }

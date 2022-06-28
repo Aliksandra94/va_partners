@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 
 
+
 import org.testng.annotations.Test;
 
 import web365.base.page.test.BasePageTest;
@@ -20,6 +21,7 @@ import web365.destination.page.ItalyOrder;
 import web365.destination.page.JordanOrder;
 import web365.destination.page.MaldivesOrder;
 import web365.destination.page.NorwayOrder;
+import web365.destination.page.Outgoing;
 import web365.destination.page.RussiaOrder;
 import web365.destination.page.SingaporeOrder;
 import web365.destination.page.SpainOrder;
@@ -27,6 +29,7 @@ import web365.destination.page.SrilankaOrder;
 import web365.destination.page.ThailandOrder;
 import web365.destination.page.UaeOrder;
 import web365.destination.page.UkrainOrder;
+import web365.home.page.HomeTabPage;
 
 public class OutgoingTest extends BasePageTest {
 	
@@ -34,46 +37,47 @@ public class OutgoingTest extends BasePageTest {
 	public void outgoingTourUae() throws InterruptedException {
 
 		System.out.println("1. Open Home Page");
-		UaeOrder destination = new UaeOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on UAE - More button");
-		destination.goToMoreButton1();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		UaeOrder uae = new UaeOrder(driver);
+		uae.goToMoreButton1();
+		Assert.assertTrue(uae.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		uae.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		uae.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		uae.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		uae.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		uae.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		uae.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		uae.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		uae.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		uae.goToToOrder();
 		Thread.sleep(2000);
 }
 	
@@ -82,46 +86,47 @@ public class OutgoingTest extends BasePageTest {
 	public void outgoingTourJordan () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		JordanOrder destination = new JordanOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Jordan - More button");
-		destination.goToMoreButton2();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		JordanOrder jordan = new JordanOrder(driver);
+		jordan.goToMoreButton2();
+		Assert.assertTrue(jordan.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		jordan.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		jordan.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		jordan.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		jordan.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		jordan.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		jordan.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		jordan.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		jordan.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		jordan.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -132,46 +137,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		ThailandOrder destination = new ThailandOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);			
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Thailand - More button");
-		destination.goToMoreButton3();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		ThailandOrder thailand = new ThailandOrder(driver);
+		thailand.goToMoreButton3();
+		Assert.assertTrue(thailand.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		thailand.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		thailand.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		thailand.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		thailand.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		thailand.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		thailand.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		thailand.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		thailand.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		thailand.goToToOrder();
 		Thread.sleep(2000);
 	}
 		
@@ -183,46 +189,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		SrilankaOrder destination = new SrilankaOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);			
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Srilanka - More button");
-		destination.goToMoreButton4();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		SrilankaOrder srilanka = new SrilankaOrder(driver);
+		srilanka.goToMoreButton4();
+		Assert.assertTrue(srilanka.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		srilanka.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		srilanka.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		srilanka.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		srilanka.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		srilanka.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		srilanka.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		srilanka.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		srilanka.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		srilanka.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -231,46 +238,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		IsraelOrder destination = new IsraelOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Israel - More button");
-		destination.goToMoreButton5();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		IsraelOrder israel = new IsraelOrder(driver);
+		israel.goToMoreButton5();
+		Assert.assertTrue(israel.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		israel.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		israel.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		israel.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		israel.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		israel.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		israel.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		israel.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		israel.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		israel.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -282,46 +290,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		GeorgiaOrder destination = new GeorgiaOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Georgia - More button");
-		destination.goToMoreButton6();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		GeorgiaOrder georgia = new GeorgiaOrder(driver);
+		georgia.goToMoreButton6();
+		Assert.assertTrue(georgia.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		georgia.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		georgia.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		georgia.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		georgia.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		georgia.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		georgia.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		georgia.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		georgia.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		georgia.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -331,46 +340,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		BulgariaOrder destination = new BulgariaOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Bulgaria - More button");
-		destination.goToMoreButton7();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		BulgariaOrder bulgaria = new BulgariaOrder(driver);
+		bulgaria.goToMoreButton7();
+		Assert.assertTrue(bulgaria.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		bulgaria.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		bulgaria.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		bulgaria.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		bulgaria.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		bulgaria.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		bulgaria.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		bulgaria.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		bulgaria.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		bulgaria.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -380,46 +390,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		ItalyOrder destination = new ItalyOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Italy - More button");
-		destination.goToMoreButton8();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		ItalyOrder italy = new ItalyOrder(driver);
+		italy.goToMoreButton8();
+		Assert.assertTrue(italy.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		italy.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		italy.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		italy.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		italy.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		italy.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		italy.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		italy.goToMessage();
 		Thread.sleep(2000);
-		destination.gillMessage("hello");
+		italy.gillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		italy.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -430,46 +441,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		GrecceOrder destination = new GrecceOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Grecce - More button");
-		destination.goToMoreButton9();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		GrecceOrder grecce = new GrecceOrder(driver);
+		grecce.goToMoreButton9();
+		Assert.assertTrue(grecce.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		grecce.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		grecce.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		grecce.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		grecce.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		grecce.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		grecce.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		grecce.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		grecce.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		grecce.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -480,46 +492,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		CyprusOrder destination = new CyprusOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Cyprus - More button");
-		destination.goToMoreButton10();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		CyprusOrder cyprus = new CyprusOrder(driver);
+		cyprus.goToMoreButton10();
+		Assert.assertTrue(cyprus.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		cyprus.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		cyprus.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		cyprus.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		cyprus.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		cyprus.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		cyprus.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		cyprus.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		cyprus.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		cyprus.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -530,46 +543,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		FranceOrder destination = new FranceOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on France - More button");
-		destination.goToMoreButton11();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		FranceOrder france = new FranceOrder(driver);
+		france.goToMoreButton11();
+		Assert.assertTrue(france.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		france.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		france.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		france.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		france.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		france.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		france.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		france.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		france.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		france.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -580,46 +594,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		NorwayOrder destination = new NorwayOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Norway - More button");
-		destination.goToMoreButton12();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		NorwayOrder norway = new NorwayOrder(driver);
+		norway.goToMoreButton12();
+		Assert.assertTrue(norway.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		norway.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		norway.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		norway.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		norway.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		norway.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		norway.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		norway.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		norway.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		norway.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -629,46 +644,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		CzechOrder destination = new CzechOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Czech Republic - More button");
-		destination.goToMoreButton13();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		CzechOrder czech = new CzechOrder(driver);
+		czech.goToMoreButton13();
+		Assert.assertTrue(czech.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		czech.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		czech.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		czech.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		czech.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		czech.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		czech.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		czech.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		czech.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		czech.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -679,46 +695,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		SpainOrder destination = new SpainOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Spain - More button");
-		destination.goToMoreButton14();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		SpainOrder spain = new SpainOrder(driver);
+		spain.goToMoreButton14();
+		Assert.assertTrue(spain.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		spain.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		spain.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		spain.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		spain.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		spain.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		spain.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		spain.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		spain.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		spain.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -729,46 +746,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		EgyptOrder destination = new EgyptOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Egypt - More button");
-		destination.goToMoreButton15();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		EgyptOrder egypt = new EgyptOrder(driver);
+		egypt.goToMoreButton15();
+		Assert.assertTrue(egypt.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		egypt.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		egypt.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		egypt.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		egypt.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		egypt.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		egypt.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		egypt.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		egypt.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		egypt.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -778,46 +796,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		SingaporeOrder destination = new SingaporeOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Singapore - More button");
-		destination.goToMoreButton16();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		SingaporeOrder singapore = new SingaporeOrder(driver);
+		singapore.goToMoreButton16();
+		Assert.assertTrue(singapore.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		singapore.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		singapore.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		singapore.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		singapore.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		singapore.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		singapore.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		singapore.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		singapore.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		singapore.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -827,46 +846,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		MaldivesOrder destination = new MaldivesOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Maldives - More button");
-		destination.goToMoreButton17();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		MaldivesOrder maldives = new MaldivesOrder(driver);
+		maldives.goToMoreButton17();
+		Assert.assertTrue(maldives.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		maldives.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		maldives.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		maldives.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		maldives.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		maldives.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		maldives.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		maldives.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		maldives.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		maldives.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -876,46 +896,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		BaliOrder destination = new BaliOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Bali - More button");
-		destination.goToMoreButton18();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		BaliOrder bali = new BaliOrder(driver);
+		bali.goToMoreButton18();
+		Assert.assertTrue(bali.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		bali.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		bali.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		bali.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		bali.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		bali.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		bali.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		bali.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		bali.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		bali.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -925,46 +946,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		RussiaOrder destination = new RussiaOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Russia - More button");
-		destination.goToMoreButton19();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		RussiaOrder russia = new RussiaOrder(driver);
+		russia.goToMoreButton19();
+		Assert.assertTrue(russia.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		russia.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		russia.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		russia.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		russia.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		russia.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		russia.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		russia.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		russia.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		russia.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
@@ -973,46 +995,47 @@ public class OutgoingTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		UkrainOrder destination = new UkrainOrder(driver);
-		Assert.assertTrue(destination.destination.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.destination.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Destination button");
-		destination.goToDestination();
-		Assert.assertTrue(destination.outgoing.isDisplayed());
+		Outgoing outg =  home.goToDestination();
+		Assert.assertTrue(outg.outgoing.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Ukrain - More button");
-		destination.goToMoreButton20();
-		Assert.assertTrue(destination.contForm.isDisplayed());
+		UkrainOrder ukrain = new UkrainOrder(driver);
+		ukrain.goToMoreButton20();
+		Assert.assertTrue(ukrain.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		destination.goToName();
+		ukrain.goToName();
 		Thread.sleep(5000);
-		destination.fillName("name");
+		ukrain.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		destination.goToPhone();
+		ukrain.goToPhone();
 		Thread.sleep(2000);
-		destination.fillPhone("phoneNumber");
+		ukrain.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		destination.goToEmail();
+		ukrain.goToEmail();
 		Thread.sleep(2000);
-		destination.fillEmail("emailAdress");
+		ukrain.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		destination.goToMessage();
+		ukrain.goToMessage();
 		Thread.sleep(2000);
-		destination.fillMessage("hello");
+		ukrain.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		destination.goToToOrder();
+		ukrain.goToToOrder();
 		Thread.sleep(2000);
 	}
 	}

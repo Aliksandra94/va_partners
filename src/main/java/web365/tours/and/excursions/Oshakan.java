@@ -27,10 +27,10 @@ public class Oshakan extends ToursAndExcursions {
 	
 	
 	@FindBy(xpath = KARMRAVOR_XPATH)
-	public WebElement karmravor;
+	public WebElement karmravor2;
 	
 	@FindBy(xpath = KARMRAVOR_STORY_XPATH)
-	public WebElement karmravorStory;
+	public WebElement karmravor2Story;
 	
 	@FindBy(xpath = KARMRAVOR_STORY_CLOSE_XPATH)
 	public WebElement karmravor2Close;
@@ -71,7 +71,7 @@ public class Oshakan extends ToursAndExcursions {
 	}
 	
 	public Oshakan goToKarmravor() {
-		moveToElement(karmravor);
+		moveToElement(karmravor2);
 		return new Oshakan(this.driver);
 	}
 	

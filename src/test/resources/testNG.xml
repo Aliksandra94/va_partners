@@ -11,7 +11,7 @@
 				<methods>
 					<exclude name="destinationTabTest" />
 					<exclude name="travelToArmeniaTabTest" />
-					<include name="armeniaTabGenInfTest" />
+					<exclude name="armeniaTabGenInfTest" />
 					<exclude name="armeniaTabHistoryTest" />
 					<exclude name="armeniaTabHolidaysTest" />
 					<exclude name="armeniaTabExcursionsTest" />
@@ -53,12 +53,13 @@
 				<methods>
 					<exclude name="armeniaAndGeorgia" />
 					<exclude name="armeniaFairyTale" />
-					<exclude name="culturalTour" />
+					<exclude name="culturalTour8Days" />
 					<exclude name="armeniaShortTour" />
 					<exclude name="discoverArmeniaTour" />
 					<exclude name="armeniaGharanaghTour" />
 					<exclude name="recognizeArmenia" />
 					<exclude name="culturalTour5Days" />
+					<exclude name="uniqueArmenia" />
 					<exclude name="aniqueArmenia" />
 					<exclude name="antiquarianTour" />
 					<exclude name="famTrip" />
@@ -101,19 +102,25 @@
 					<exclude name="erebuniMuseum" />
 					<exclude name="tsitsernakaberd" />
 					<exclude name="matenadaran" />
+
 					<exclude name="echmiadzin" />
 					<exclude name="stHripsime" />
 					<exclude name="stGayane" />
 					<exclude name="motherCathedral" />
 					<exclude name="zvartnots" />
+
 					<exclude name="ashtarak" />
 					<exclude name="aragats" />
 					<exclude name="karmravor" />
 					<exclude name="amberd" />
+
+					<exclude name="oshakanHovhanavanq" />
 					<exclude name="oshakan" />
 					<exclude name="karmravor2" />
 					<exclude name="saghmosavank" />
 					<exclude name="hovhanavanq" />
+
+                    <include name="garniGeghard" />
 				</methods>
 			</class>
 		</classes>

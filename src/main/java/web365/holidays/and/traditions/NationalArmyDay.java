@@ -19,7 +19,7 @@ public class NationalArmyDay extends HolidaysAndTraditions {
 	@FindBy(xpath = NATIONAL_ARMY_IMAGE_XPATH)
 	public WebElement nationalArmyImg;
 
-	public NationalArmyDay goTonationalArmyDay() {
+	public NationalArmyDay goToNationalArmyDay() {
 		moveToElement(nationalArmyDay);
 		return new NationalArmyDay(this.driver);
 		

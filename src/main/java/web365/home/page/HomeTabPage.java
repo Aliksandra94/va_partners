@@ -25,6 +25,10 @@ public class HomeTabPage extends BasePage {
 
 
 
+	
+
+
+
 	public HomeTabPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -78,7 +82,7 @@ public class HomeTabPage extends BasePage {
 	@FindBy(xpath = LANGUAGES_XPATH)
 	public WebElement lang;
 
-	
+
 
 	public HomeTabPage goToLogo() {
 		moveToElement (logo);
@@ -146,6 +150,15 @@ public class HomeTabPage extends BasePage {
 		moveToElement(genInf);
 		return new ArmeniaMenuPage(this.driver);
 	}
+
+
+	public Outgoing goToOutgoing() {
+        moveToElement(destination);
+		return new Outgoing(this.driver);
+	}
+
+
+
 
 
 	

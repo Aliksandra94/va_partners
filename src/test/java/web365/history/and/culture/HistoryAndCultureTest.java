@@ -1,12 +1,12 @@
 package web365.history.and.culture;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import web365.base.page.test.BasePageTest;
 import web365.home.page.ArmeniaMenuPage;
 import web365.home.page.HomeTabPage;
-import web365.tours.and.excursions.Echmiadzin;
 
 public class HistoryAndCultureTest extends BasePageTest {
 	
@@ -14,17 +14,18 @@ public class HistoryAndCultureTest extends BasePageTest {
 	public void antiquity() throws InterruptedException {
 
 		System.out.println("1. Open Home Page");
-		Antiquity armenia = new Antiquity(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
-		armenia.goToHistoryCulture();
-		Assert.assertTrue(armenia.antiqImage.isDisplayed());
+		Antiquity antiq = new Antiquity(driver);
+		armMenu.goToHistoryCulture();
+		Assert.assertTrue(antiq.antiqImage.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -32,22 +33,21 @@ public class HistoryAndCultureTest extends BasePageTest {
 	public void middleAges() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		MiddleAges armenia = new MiddleAges(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
-		armenia.goToHistoryCulture();
-		Assert.assertTrue(armenia.middleAges.isDisplayed());
-		Thread.sleep(2000);
+		armMenu.goToHistoryCulture();
 		
 		System.out.println("4. Click on Middle Ages button");
-		armenia.goToMiddleAges();
-		Assert.assertTrue(armenia.middleAgesText.isDisplayed());
+		MiddleAges middle = new MiddleAges(driver);
+		middle.goToMiddleAges();
+		Assert.assertTrue(middle.middleAgesText.isDisplayed());
 		Thread.sleep(2000);
 		
 	}
@@ -56,22 +56,21 @@ public class HistoryAndCultureTest extends BasePageTest {
 	public void earlyModernEra() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		EarlyModernEra armenia = new EarlyModernEra(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
-		armenia.goToHistoryCulture();
-		Assert.assertTrue(armenia.earlyModernEra.isDisplayed());
-		Thread.sleep(2000);
+		armMenu.goToHistoryCulture();
 		
 		System.out.println("4. Click on Middle Ages button");
-		armenia.goToEarlyModernEra();
-		Assert.assertTrue(armenia.earlyEraImg.isDisplayed());
+		EarlyModernEra earlyModern = new EarlyModernEra(driver);
+		earlyModern.goToEarlyModernEra();
+		Assert.assertTrue(earlyModern.earlyEraImg.isDisplayed());
 		Thread.sleep(2000);
 		
 	}
@@ -81,22 +80,21 @@ public class HistoryAndCultureTest extends BasePageTest {
 		
 		
 		System.out.println("1. Open Home Page");
-		WorldWar1AndGenocide armenia = new WorldWar1AndGenocide(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
-		armenia.goToHistoryCulture();
-		Assert.assertTrue(armenia.worldWarGenocide.isDisplayed());
-		Thread.sleep(2000);
-		
-		System.out.println("4. Click on Early Modern Era button");
-		armenia.goToWorldWarGenocide();
-		Assert.assertTrue(armenia.warGenocideImg.isDisplayed());
+		armMenu.goToHistoryCulture();
+	
+		System.out.println("4. Click on World War 1 button");
+		WorldWar1AndGenocide war1 = new WorldWar1AndGenocide(driver);
+		war1.goToWorldWarGenocide();
+		Assert.assertTrue(war1.warGenocideImg.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -104,22 +102,21 @@ public class HistoryAndCultureTest extends BasePageTest {
 	public void democraticRepublicOfArmenia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		DemocraticRepublicOfArmenia armenia = new DemocraticRepublicOfArmenia(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();	
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
-		armenia.goToHistoryCulture();
-		Assert.assertTrue(armenia.dra.isDisplayed());
-		Thread.sleep(2000);
+		armMenu.goToHistoryCulture();
 		
-		System.out.println("4. Click on World War 1 and The Armenian Genocide button");
-		armenia.goToDra();
-		Assert.assertTrue(armenia.republicImg.isDisplayed());
+		System.out.println("4. Click on Democratic Republic of Armenia button");
+		DemocraticRepublicOfArmenia democrat = new DemocraticRepublicOfArmenia(driver);
+		democrat.goToDra();
+		Assert.assertTrue(democrat.republicImg.isDisplayed());
 		Thread.sleep(2000);
 		
 	}
@@ -129,45 +126,43 @@ public class HistoryAndCultureTest extends BasePageTest {
 	public void sovietArmenia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		SovietArmenia armenia = new SovietArmenia(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		ArmeniaMenuPage amMenu = armenia.goToArmeniaBtn();
+		ArmeniaMenuPage amMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
 		amMenu.goToHistoryCulture();
-		Assert.assertTrue(armenia.sovietArm.isDisplayed());
-		Thread.sleep(2000);
 		
-		System.out.println("4. Click on World War 1 and The Armenian Genocide button");
-		armenia.goToSovietArm();
-		Assert.assertTrue(armenia.sovetArmImg.isDisplayed());
+		System.out.println("4. Click on Soviet Armenia button");
+		SovietArmenia soviet = new SovietArmenia(driver);
+		soviet.goToSovietArm();
+		Assert.assertTrue(soviet.sovetArmImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
 	@Test
-	public void CultureOfArmenia() throws InterruptedException {
+	public void cultureOfArmenia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		CultureOfArmenia armenia = new CultureOfArmenia(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Histoyr and Culture button");
-		armenia.goToHistoryCulture();
-		Assert.assertTrue(armenia.cultureArm.isDisplayed());
-		Thread.sleep(2000);
+		armMenu.goToHistoryCulture();
 		
-		System.out.println("4. Click on World War 1 and The Armenian Genocide button");
-		armenia.goTocultureArm();
-		Assert.assertTrue(armenia.cultureArmImg.isDisplayed());
+		System.out.println("4. Click on Culture of Armenia button");
+		CultureOfArmenia cultArm = new CultureOfArmenia(driver);
+		cultArm.goTocultureArm();
+		Assert.assertTrue(cultArm.cultureArmImg.isDisplayed());
 		Thread.sleep(2000);
 	}
 }

@@ -80,6 +80,11 @@ public class Outgoing  extends HomeTabPage {
 	
 	
 
+	public Outgoing goToOutgoing() {
+		moveToElement(outgoing);
+		return new Outgoing(this.driver);
+	}
+	
 	public UaeOrder  goToMoreButton1() {
 		moveToElement(moreButton1);
 		return new UaeOrder(this.driver);

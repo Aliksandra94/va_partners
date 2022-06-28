@@ -16,5 +16,15 @@ public class HistoryAndCulture extends HomeTabPage {
 	
 	@FindBy(xpath = HISTORY_AND_CULTURE_HEADER_XPATH)
 	public WebElement historyCultureHead;
+
+	public HistoryAndCulture goToHistoryAndCulture() {
+		moveToElement(historyCulture);
+		return new HistoryAndCulture(this.driver);
+		
+	}
+
+
+		
+	}
 	
-}
+

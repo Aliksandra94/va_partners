@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import web365.base.page.test.BasePageTest;
+import web365.home.page.ArmeniaMenuPage;
+import web365.home.page.HomeTabPage;
 
 public class HolidaysAndTraditionsTest extends BasePageTest {
 
@@ -12,17 +14,19 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void newYear() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		NewYear armenia = new NewYear(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Thread.sleep(2000);
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.newYearImg.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -31,22 +35,26 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void nationalArmyDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		NationalArmyDay armenia = new NationalArmyDay(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Thread.sleep(2000);
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.nationalArmyDay.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on National Army Day button");
-		armenia.goTonationalArmyDay();
-		Assert.assertTrue(armenia.nationalArmyImg.isDisplayed());
+		NationalArmyDay army = new NationalArmyDay(driver);
+		army = army.goToNationalArmyDay();
+		Thread.sleep(2000);
+		Assert.assertTrue(army.nationalArmyImg.isDisplayed());
 		Thread.sleep(2000);
 	}
 	
@@ -54,22 +62,26 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void womensDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		WomensDay armenia = new WomensDay(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Thread.sleep(2000);
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.womensDay.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Women's day button");
-		armenia.goToWomensDay();
-		Assert.assertTrue(armenia.womensDayImg.isDisplayed());
+		WomensDay womens = new WomensDay(driver);
+		womens = womens.goToWomensDay();
+		Thread.sleep(2000);
+		Assert.assertTrue(womens.womensDayImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -77,22 +89,26 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void maternityDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		DayOfMaternity armenia = new DayOfMaternity(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Thread.sleep(2000);
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.dayOfMaternity.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on National Army Day button");
-		armenia.goToDayOfMaternity();
-		Assert.assertTrue(armenia.dayOfMaternityImg.isDisplayed());
+		DayOfMaternity maternity = new DayOfMaternity(driver);
+		maternity = maternity.goToDayOfMaternity();
+		Thread.sleep(2000);
+		Assert.assertTrue(maternity.dayOfMaternityImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -101,22 +117,25 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void victoryAndPeaceDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		VictoryAndPeaceDay armenia = new VictoryAndPeaceDay(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.victoryAndPeaceDay.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on National Army Day button");
-		armenia.goToVictoryAndPeaceDay();
-		Assert.assertTrue(armenia.victoryAndPeaceDayImg.isDisplayed());
+		VictoryAndPeaceDay victory = new VictoryAndPeaceDay(driver);
+		victory = victory.goToVictoryAndPeaceDay();
+		Thread.sleep(2000);
+		Assert.assertTrue(victory.victoryAndPeaceDayImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -127,22 +146,25 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void republicDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		RepublicDay armenia = new RepublicDay(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.republic.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Republic day button");
-		armenia.goToRepublic();
-		Assert.assertTrue(armenia.republicImg.isDisplayed());
+		RepublicDay republic = new RepublicDay(driver);
+		republic = republic.goToRepublic();
+		Thread.sleep(2000);
+		Assert.assertTrue(republic.republicImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -151,22 +173,25 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void constitutionDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ConstitutionDay armenia = new ConstitutionDay(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.constitutionDay.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Constitution Day button");
-		armenia.goToConstitutionDay();
-		Assert.assertTrue(armenia.constitutionDayImg.isDisplayed());
+		ConstitutionDay constitution = new ConstitutionDay(driver);
+		constitution = constitution.goToConstitutionDay();
+		Thread.sleep(2000);
+		Assert.assertTrue(constitution.constitutionDayImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -175,22 +200,25 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void indipendenceDay() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		IndipendenceDay armenia = new IndipendenceDay(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.independenceDay.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Indipendence Day button");
-		armenia.goToIndependenceDay();
-		Assert.assertTrue(armenia.independenceDayImg.isDisplayed());
+		IndipendenceDay indipendence = new IndipendenceDay(driver);
+		indipendence = indipendence.goToIndependenceDay();
+		Thread.sleep(2000);
+		Assert.assertTrue(indipendence.independenceDayImg.isDisplayed());
 		Thread.sleep(2000);
 }
 	
@@ -199,22 +227,26 @@ public class HolidaysAndTraditionsTest extends BasePageTest {
 	public void traditions () throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		Traditions armenia = new Traditions(driver);
-		Assert.assertTrue(armenia.armeniaBtn.isDisplayed());
+		HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.armeniaBtn.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Armenia button");
-		armenia.goToArmeniaBtn();
+		ArmeniaMenuPage armMenu = home.goToArmeniaBtn();
+		Thread.sleep(2000);
+		Assert.assertTrue(armMenu.armTab.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Holidays and Traditions button");
-		armenia.goToHolidaysTraditions();
-		Assert.assertTrue(armenia.traditions.isDisplayed());
+		HolidaysAndTraditions holidays = armMenu.goToHolidaysTraditions();
+		Assert.assertTrue(holidays.holidaysTraditions.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Indipendence Day button");
-		armenia.goToTraditions();
-		Assert.assertTrue(armenia.traditionsImg.isDisplayed());
+		Traditions trad = new Traditions(driver);
+		trad = trad.goToTraditions();
+		Thread.sleep(2000);
+		Assert.assertTrue(trad.traditionsImg.isDisplayed());
 		Thread.sleep(2000);
 }
 }

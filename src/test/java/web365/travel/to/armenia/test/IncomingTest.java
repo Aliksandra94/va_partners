@@ -1,9 +1,11 @@
 package web365.travel.to.armenia.test;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import web365.base.page.test.BasePageTest;
+import web365.home.page.HomeTabPage;
 import web365.incoming.page.Antiquarian;
 import web365.incoming.page.ArmeniaAndGeorgia;
 import web365.incoming.page.ArmeniaFairyTale;
@@ -15,6 +17,7 @@ import web365.incoming.page.CulturalTours5Days;
 import web365.incoming.page.DiscoverArmenia;
 import web365.incoming.page.FamTrip;
 import web365.incoming.page.Honeymoon;
+import web365.incoming.page.IncomingTours;
 import web365.incoming.page.PetroglyphTour;
 import web365.incoming.page.RecognizeArmenia;
 import web365.incoming.page.UniqueArmenia;
@@ -24,724 +27,739 @@ public class IncomingTest extends BasePageTest {
 
 	
 	@Test
-	public void ArmeniaAndGeorgia() throws InterruptedException {
+	public void armeniaAndGeorgia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ArmeniaAndGeorgia travelToArm = new ArmeniaAndGeorgia(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Armenia and Georgia Tour - More button");
-		travelToArm.goToMoreButton1();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		ArmeniaAndGeorgia armGeorg = new ArmeniaAndGeorgia(driver);
+		armGeorg.goToMoreButton1();
+		Assert.assertTrue(armGeorg.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		armGeorg.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		armGeorg.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		armGeorg.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		armGeorg.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		armGeorg.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		armGeorg.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		armGeorg.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		armGeorg.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		armGeorg.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	
 	@Test
-	public void ArmeniaFairyTale() throws InterruptedException {
+	public void armeniaFairyTale() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ArmeniaFairyTale travelToArm = new ArmeniaFairyTale(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Armenia Fairy Tale more button");
-		travelToArm.goToMoreButton2();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		ArmeniaFairyTale fairyTale = new ArmeniaFairyTale(driver);
+		fairyTale.goToMoreButton2();
+		Assert.assertTrue(fairyTale.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		fairyTale.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		fairyTale.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		fairyTale.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		fairyTale.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		fairyTale.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		fairyTale.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		fairyTale.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		fairyTale.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		fairyTale.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	
 	@Test
-	public void CulturalTour() throws InterruptedException {
+	public void culturalTour8Days() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		CulturalTour8Days travelToArm = new CulturalTour8Days(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Cultural Tour 8 Days more button");
-		travelToArm.goToMoreButton3();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		CulturalTour8Days cultural8 = new CulturalTour8Days(driver);
+		cultural8.goToMoreButton3();
+		Assert.assertTrue(cultural8.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		cultural8.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		cultural8.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		cultural8.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		cultural8.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		cultural8.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		cultural8.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		cultural8.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		cultural8.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		cultural8.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	@Test
-	public void ArmeniaShortTour() throws InterruptedException {
+	public void armeniaShortTour() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ArmeniaShort travelToArm = new ArmeniaShort(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Armenia Short Tour more button");
-		travelToArm.goToMoreButton4();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		ArmeniaShort armShort = new ArmeniaShort(driver);
+		armShort.goToMoreButton4();
+		Assert.assertTrue(armShort.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		armShort.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		armShort.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		armShort.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		armShort.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		armShort.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		armShort.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		armShort.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		armShort.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		armShort.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	@Test
-	public void DiscoverArmeniaTour() throws InterruptedException {
+	public void discoverArmeniaTour() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		DiscoverArmenia travelToArm = new DiscoverArmenia(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Discover Armenia Tour more button");
-		travelToArm.goToMoreButton5();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		DiscoverArmenia discover = new DiscoverArmenia(driver);
+		discover.goToMoreButton5();
+		Assert.assertTrue(discover.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		discover.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		discover.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		discover.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		discover.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		discover.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		discover.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		discover.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		discover.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		discover.goToToOrder();
 		Thread.sleep(2000);
 	}
 
 	
 	@Test
-	public void ArmeniaGharanaghTour() throws InterruptedException {
+	public void armeniaGharanaghTour() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ArmeniaGharabagh travelToArm = new ArmeniaGharabagh(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Armenia Gharabagh Tour more button");
-		travelToArm.goToMoreButton6();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		ArmeniaGharabagh gharabagh = new ArmeniaGharabagh(driver);
+		gharabagh.goToMoreButton6();
+		Assert.assertTrue(gharabagh.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		gharabagh.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		gharabagh.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		gharabagh.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		gharabagh.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		gharabagh.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		gharabagh.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		gharabagh.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		gharabagh.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		gharabagh.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	@Test
-	public void RecognizeArmenia() throws InterruptedException {
+	public void recognizeArmenia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		RecognizeArmenia travelToArm = new RecognizeArmenia(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Recognize Armenia Tour more button");
-		travelToArm.goToMoreButton7();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		RecognizeArmenia recognize = new RecognizeArmenia(driver);
+		recognize.goToMoreButton7();
+		Assert.assertTrue(recognize.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		recognize.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		recognize.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		recognize.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		recognize.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		recognize.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		recognize.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		recognize.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		recognize.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		recognize.goToToOrder();
 		Thread.sleep(2000);
 	}	
 	
 	@Test
-	public void CulturalTour5Days() throws InterruptedException {
+	public void culturalTour5Days() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		CulturalTours5Days travelToArm = new CulturalTours5Days(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Cultural Tour 5 Days more button");
-		travelToArm.goToMoreButton8();
+		CulturalTours5Days cultural5 = new CulturalTours5Days(driver);
+		cultural5.goToMoreButton8();
 		Thread.sleep(2000);
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		Assert.assertTrue(cultural5.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		cultural5.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		cultural5.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		cultural5.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		cultural5.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		cultural5.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		cultural5.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		cultural5.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		cultural5.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		cultural5.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	
 	@Test
-	public void UniqueArmenia() throws InterruptedException {
+	public void uniqueArmenia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		UniqueArmenia travelToArm = new UniqueArmenia(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Unique Armenia with Safari Tour more button");
-		travelToArm.goToMoreButton9();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		UniqueArmenia unique = new UniqueArmenia(driver);
+		unique.goToMoreButton9();
+		Assert.assertTrue(unique.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		unique.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		unique.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		unique.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		unique.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		unique.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		unique.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		unique.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		unique.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		unique.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	@Test
-	public void AntiquarianTour() throws InterruptedException {
+	public void antiquarianTour() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		Antiquarian travelToArm = new Antiquarian(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Unique Armenia with Safari Tour more button");
-		travelToArm.goToMoreButton10();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		Antiquarian antiquarian = new Antiquarian(driver);
+		antiquarian.goToMoreButton10();
+		Assert.assertTrue(antiquarian.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		antiquarian.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		antiquarian.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		antiquarian.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		antiquarian.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		antiquarian.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		antiquarian.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		antiquarian.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		antiquarian.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		antiquarian.goToToOrder();
 		Thread.sleep(2000);
 	}
 
 	
 	@Test
-	public void FamTrip() throws InterruptedException {
+	public void famTrip() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		FamTrip travelToArm = new FamTrip(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Fam Trip  Tour more button");
-		travelToArm.goToMoreButton11();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		FamTrip fam = new FamTrip(driver);
+		fam.goToMoreButton11();
+		Assert.assertTrue(fam.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		fam.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		fam.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		fam.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		fam.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		fam.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		fam.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		fam.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		fam.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		fam.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	@Test
-	public void ColorsOfArmenia() throws InterruptedException {
+	public void colorsOfArmenia() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		ColorsOfArmenia travelToArm = new ColorsOfArmenia(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Colors of Armenia Tour more button");
-		travelToArm.goToMoreButton12();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		ColorsOfArmenia colors = new ColorsOfArmenia(driver);
+		colors.goToMoreButton12();
+		Assert.assertTrue(colors.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		colors.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		colors.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		colors.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		colors.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		colors.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		colors.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		colors.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		colors.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		colors.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	@Test
-	public void Honeymoon() throws InterruptedException {
+	public void honeymoon() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		Honeymoon travelToArm = new Honeymoon(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Honeymoon more button");
-		travelToArm.goToMoreButton13();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		Honeymoon honeymoon = new Honeymoon(driver);
+		honeymoon.goToMoreButton13();
+		Assert.assertTrue(honeymoon.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		honeymoon.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		honeymoon.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		honeymoon.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		honeymoon.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		honeymoon.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		honeymoon.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		honeymoon.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		honeymoon.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		honeymoon.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	
 	@Test
-	public void PetroglyphTour() throws InterruptedException {
+	public void petroglyphTour() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		PetroglyphTour travelToArm = new PetroglyphTour(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Petroglyph Tour more button");
-		travelToArm.goToMoreButton14();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		PetroglyphTour petroglyph = new PetroglyphTour(driver);
+		petroglyph.goToMoreButton14();
+		Assert.assertTrue(petroglyph.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		petroglyph.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		petroglyph.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		petroglyph.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		petroglyph.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		petroglyph.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		petroglyph.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		petroglyph.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		petroglyph.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		petroglyph.goToToOrder();
 		Thread.sleep(2000);
 	}
 	
 	
 	@Test
-	public void VaccineTour() throws InterruptedException {
+	public void vaccineTour() throws InterruptedException {
 		
 		System.out.println("1. Open Home Page");
-		VaccineTour travelToArm = new VaccineTour(driver);
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+	    HomeTabPage home = new HomeTabPage(driver);	
+		Assert.assertTrue(home.travelArm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("2. Click on Travel to Armenia button");
-		travelToArm.goToIncomingTours();
-		Assert.assertTrue(travelToArm.incomingTours.isDisplayed());
+		IncomingTours incoming = home.goToIncomingTours();
+		Assert.assertTrue(incoming.incomingTours.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("3. Click on Vaccine Tour To Armenia more button");
-		travelToArm.goToMoreButton15();
-		Assert.assertTrue(travelToArm.contForm.isDisplayed());
+		VaccineTour vaccine = new VaccineTour(driver);
+		vaccine.goToMoreButton15();
+		Assert.assertTrue(vaccine.contForm.isDisplayed());
 		Thread.sleep(2000);
 		
 		System.out.println("4. Click on Name button and type Aliksandra");
-		travelToArm.goToName();
+		vaccine.goToName();
 		Thread.sleep(5000);
-		travelToArm.fillName("name");
+		vaccine.fillName("name");
 		Thread.sleep(2000);
 		
 		System.out.println("5. Click on Phone button and type phone number");
-		travelToArm.goToPhone();
+		vaccine.goToPhone();
 		Thread.sleep(2000);
-		travelToArm.fillPhone("phoneNumber");
+		vaccine.fillPhone("phoneNumber");
 		Thread.sleep(2000);
 		
 		System.out.println("6. Click on email button and type emailAdress");
-		travelToArm.goToEmail();
+		vaccine.goToEmail();
 		Thread.sleep(2000);
-		travelToArm.fillEmail("emailAdress");
+		vaccine.fillEmail("emailAdress");
 		Thread.sleep(2000);
 		
 		System.out.println("7. Click on Message button and type Hello");
-		travelToArm.goToMessage();
+		vaccine.goToMessage();
 		Thread.sleep(2000);
-		travelToArm.fillMessage("hello");
+		vaccine.fillMessage("hello");
 		Thread.sleep(2000);
 		
 		System.out.println("8. Click on To Order button");
-		travelToArm.goToToOrder();
+		vaccine.goToToOrder();
 		Thread.sleep(2000);
 	}
 
